@@ -1,0 +1,223 @@
+/* ============================================
+   Full Stack Java Developer - Portfolio Styles
+   Custom animations, typography & overrides
+   ============================================ */
+
+/* Smooth scroll (backup for older browsers) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section animation base - hidden until in view */
+.section-animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide from left variant */
+.section-animate.slide-left {
+  transform: translateX(-24px);
+}
+
+.section-animate.slide-left.animate-in {
+  transform: translateX(0);
+}
+
+/* Keyframes for landing section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation classes (used in HTML with Tailwind animate-*) */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.6s ease-out forwards;
+}
+
+/* Navbar shadow when scrolled */
+#navbar.scrolled {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+
+.dark #navbar.scrolled {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Active nav link highlight */
+.nav-link.active {
+  color: rgb(2 132 199);
+}
+
+.dark .nav-link.active {
+  color: rgb(56 189 248);
+}
+
+/* Project card hover lift and border */
+.project-card:hover {
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+.dark .project-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* Certifications carousel */
+.cert-carousel {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .cert-carousel {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.cert-carousel-viewport {
+  touch-action: pan-y pinch-zoom;
+}
+
+.cert-carousel-track {
+  will-change: transform;
+}
+
+.cert-nav-prev {
+  left: -0.5rem;
+}
+
+@media (min-width: 640px) {
+  .cert-nav-prev {
+    left: 0;
+  }
+}
+
+.cert-nav-next {
+  right: -0.5rem;
+}
+
+@media (min-width: 640px) {
+  .cert-nav-next {
+    right: 0;
+  }
+}
+
+.cert-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgb(203 213 225);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.dark .cert-dot {
+  background-color: rgb(71 85 105);
+}
+
+.cert-dot.active {
+  background-color: rgb(14 165 233);
+  transform: scale(1.25);
+}
+
+.dark .cert-dot.active {
+  background-color: rgb(56 189 248);
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgb(14 165 233);
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .section-animate,
+  .section-animate.animate-in,
+  .project-card,
+  .skill-card,
+  .certification-card {
+    transition: none;
+  }
+
+  .section-animate {
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Mobile: ensure touch targets are large enough */
+@media (max-width: 768px) {
+  .nav-link,
+  .mobile-nav-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Print: simplify for resume/print */
+@media print {
+  #navbar,
+  #theme-toggle,
+  #mobile-menu-btn,
+  #mobile-menu,
+  .project-card a[href="#"],
+  footer a {
+    visibility: hidden;
+  }
+
+  body {
+    background: white;
+    color: #111;
+  }
+
+  .section-animate {
+    opacity: 1;
+    transform: none;
+  }
+}
