@@ -5,402 +5,505 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Personal portfolio of a Full Stack Java Software Developer."
+    content="Lavish — Senior Java Developer portfolio. Enterprise Spring Boot, microservices, REST APIs, and full-stack delivery."
   />
-  <title>Full Stack Java Developer | Portfolio</title>
-
-  <script>
-    tailwind = window.tailwind || {};
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: "#eef8ff",
-              100: "#d8efff",
-              200: "#b9e4ff",
-              300: "#86d3ff",
-              400: "#4cb7ff",
-              500: "#2296ff",
-              600: "#0b78f4",
-              700: "#0a60df",
-              800: "#104eb5",
-              900: "#14458e"
-            }
-          }
-        }
-      }
-    };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="keywords" content="Senior Java Developer, Spring Boot, Microservices, REST API, Lavish" />
+  <title>Lavish | Senior Java Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@500;600&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="animated-bg bg-slate-50 text-slate-800 transition-colors duration-300 dark:bg-white dark:text-slate-800">
-  <div class="bg-orb orb-1" aria-hidden="true"></div>
-  <div class="bg-orb orb-2" aria-hidden="true"></div>
-  <div class="bg-orb orb-3" aria-hidden="true"></div>
-  <div class="bg-orb orb-4" aria-hidden="true"></div>
-  <div id="mousePointer" class="mouse-pointer" aria-hidden="true"></div>
-  <div id="bubbleLayer" class="bubble-layer" aria-hidden="true"></div>
-  <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
-    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-      <a href="#home" class="text-lg font-bold tracking-tight text-brand-700 dark:text-brand-300">
-        DevPortfolio
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#home" class="logo">
+        <span class="logo-mark">L</span>
+        <span class="logo-text">Lavish<span class="logo-dot">.</span>dev</span>
       </a>
 
-      <button
-        id="menuToggle"
-        class="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800 md:hidden"
-        aria-label="Toggle navigation"
-      >
-        Menu
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
       </button>
 
-      <ul id="navLinks" class="hidden gap-6 text-sm font-medium md:flex">
-        <li><a class="nav-link" href="#home">Home</a></li>
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#projects">Projects</a></li>
-        <li><a class="nav-link" href="#skills">Skills</a></li>
-        <li><a class="nav-link" href="#experience-education">Experience & Education</a></li>
-        <li><a class="nav-link" href="#certifications">Certifications</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#summary" class="nav-link">Summary</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
-      <button
-        id="themeToggle"
-        class="ml-3 rounded-full border border-slate-300 p-2 text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
-        aria-label="Toggle dark mode"
-      >
-        <span id="themeIcon" aria-hidden="true">🌙</span>
-      </button>
+      <a href="assets/resume.pdf" class="btn btn-sm btn-accent nav-resume" download>
+        Resume
+      </a>
     </nav>
-
-    <div id="mobileNav" class="hidden border-t border-slate-200 px-4 py-3 dark:border-slate-800 md:hidden">
-      <ul class="space-y-3 text-sm font-medium">
-        <li><a class="mobile-link nav-link" href="#home">Home</a></li>
-        <li><a class="mobile-link nav-link" href="#about">About</a></li>
-        <li><a class="mobile-link nav-link" href="#projects">Projects</a></li>
-        <li><a class="mobile-link nav-link" href="#skills">Skills</a></li>
-        <li><a class="mobile-link nav-link" href="#experience-education">Experience & Education</a></li>
-        <li><a class="mobile-link nav-link" href="#certifications">Certifications</a></li>
-        <li><a class="mobile-link nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
   </header>
 
   <main>
-    <section id="home" class="hero-pattern">
-      <div class="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center md:py-24">
-        <div>
-          <p class="mb-3 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold text-brand-700 dark:bg-brand-900/40 dark:text-brand-300">
-            Lavish - Lead Corporate Dev Mentor | Java Specialist
+    <!-- Hero -->
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">
+            <span class="status-dot"></span>
+            Available for Senior Java roles
           </p>
-          <h1 class="text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
-            Engineering enterprise-grade products with clean architecture and measurable impact
+          <h1 class="hero-title">
+            Lavish
+            <span class="hero-role">Senior Java Developer</span>
           </h1>
-          <p class="mt-4 max-w-xl text-sm text-slate-600 dark:text-slate-300 sm:text-base">
-            I help teams and learners build production-ready full stack applications with Java excellence, modern frontend practices, and scalable backend systems.
+          <p class="hero-lead">
+            I design and ship enterprise-grade backends with Spring Boot, secure REST APIs,
+            and measurable performance gains — backed by mentorship and production delivery.
           </p>
-          <p class="mt-3 text-sm font-semibold text-brand-700 dark:text-brand-300">
-            Core Skills:
-            <span id="typedSkill" class="typed-skill ml-1 text-slate-800 dark:text-slate-100">Java</span>
+          <p class="hero-typed">
+            Core stack:
+            <span id="typedSkill" class="typed-text" aria-live="polite">Java</span>
           </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#projects" class="rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow hover:bg-brand-700">
-              View Projects
-            </a>
-            <a href="#contact" class="rounded-lg border border-slate-300 px-5 py-2.5 text-sm font-semibold hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800">
-              Contact Me
-            </a>
-            <a href="assets/resume.pdf" download class="rounded-lg border border-brand-300 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700 hover:bg-brand-100 dark:border-brand-700 dark:bg-slate-900 dark:text-brand-300 dark:hover:bg-slate-800">
-              Download Resume (PDF)
-            </a>
-          </div>
-        </div>
-
-        <div class="card-glow rounded-2xl border border-slate-200 bg-white p-6 shadow-xl dark:border-slate-800 dark:bg-slate-900">
-          <img
-            src="assets/profile.png"
-            alt="Developer profile"
-            class="mb-4 h-28 w-28 rounded-full border-4 border-brand-200 object-cover dark:border-brand-800"
-          />
-          <h2 class="text-xl font-bold">Hi, I am Lavish</h2>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-            Passionate about backend engineering, API design, and delivering polished frontend experiences.
-          </p>
-          <div class="mt-5 grid grid-cols-2 gap-3 text-sm">
-            <div class="rounded-lg bg-slate-100 p-3 dark:bg-slate-800">
-              <p class="font-bold text-brand-700 dark:text-brand-300">3+ Years</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Experience</p>
-            </div>
-            <div class="rounded-lg bg-slate-100 p-3 dark:bg-slate-800">
-              <p class="font-bold text-brand-700 dark:text-brand-300">20+ Projects</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Delivered</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section-wrap">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">
-          Full Stack Java Developer focused on building secure APIs and interactive frontend applications.
-        </p>
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
-          <article class="section-card">
-            <h3 class="mb-2 text-lg font-semibold">Who I Am</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300">
-              I specialize in Java and Spring ecosystem development with production-grade practices such as layered architecture, testing, CI/CD, and performance optimization.
-            </p>
-          </article>
-          <article class="section-card">
-            <h3 class="mb-2 text-lg font-semibold">What I Deliver</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300">
-              End-to-end software development from requirement analysis to deployment, including REST APIs, frontend integration, database modeling, and cloud deployment.
-            </p>
-            <a href="assets/resume.pdf" class="mt-4 inline-block text-sm font-semibold text-brand-700 hover:underline dark:text-brand-300">
+          <div class="hero-actions">
+            <a href="assets/resume.pdf" class="btn btn-primary" download>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download Resume
             </a>
+            <a href="#projects" class="btn btn-outline">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Contact</a>
+          </div>
+          <ul class="hero-tags" aria-label="Role highlights">
+            <li>Spring Boot</li>
+            <li>Microservices</li>
+            <li>REST APIs</li>
+            <li>MySQL / MongoDB</li>
+          </ul>
+        </div>
+
+        <aside class="hero-card reveal" data-delay="120">
+          <div class="avatar" aria-hidden="true">
+            <span>LV</span>
+          </div>
+          <h2>Quick profile</h2>
+          <p class="hero-card-bio">
+            Lead Corporate Dev Mentor &amp; Java specialist focused on clean architecture,
+            API design, and scalable full-stack systems.
+          </p>
+          <dl class="stat-grid">
+            <div>
+              <dt data-count="8">0</dt>
+              <dd>Years experience</dd>
+            </div>
+            <div>
+              <dt data-count="20">0</dt>
+              <dd>Projects delivered</dd>
+            </div>
+            <div>
+              <dt data-count="30">0</dt>
+              <dd>API perf. uplift %</dd>
+            </div>
+            <div>
+              <dt data-count="4">0</dt>
+              <dd>Certifications</dd>
+            </div>
+          </dl>
+          <a href="assets/resume.pdf" class="btn btn-block btn-outline" download>Get PDF resume</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Professional Summary -->
+    <section id="summary" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-label">Professional Summary</span>
+          <h2>Built for recruiters — key facts at a glance</h2>
+          <p>
+            Senior Java engineer with end-to-end ownership from architecture to deployment,
+            mentoring teams, and delivering business-critical platforms.
+          </p>
+        </header>
+
+        <div class="summary-grid">
+          <article class="summary-card reveal">
+            <div class="summary-icon" aria-hidden="true">01</div>
+            <h3>What I do</h3>
+            <p>
+              Lead backend development on Java/Spring ecosystems: microservices, JPA/Hibernate,
+              Spring Security, event-driven patterns, and integration with React frontends.
+            </p>
+          </article>
+          <article class="summary-card reveal" data-delay="80">
+            <div class="summary-icon" aria-hidden="true">02</div>
+            <h3>How I work</h3>
+            <p>
+              Layered architecture, TDD-friendly modules, CI/CD pipelines, code reviews,
+              and documentation that keeps cross-functional teams aligned.
+            </p>
+          </article>
+          <article class="summary-card reveal" data-delay="160">
+            <div class="summary-icon" aria-hidden="true">03</div>
+            <h3>What I bring</h3>
+            <p>
+              Mentorship for junior developers, payment-gateway integrations (Razorpay/UPI),
+              cloud-ready deployments with Docker, and measurable SLA improvements.
+            </p>
+          </article>
+        </div>
+
+        <div class="highlight-bar reveal">
+          <p><strong>Target roles:</strong> Senior Java Developer · Backend Lead · Spring Boot Engineer · Full Stack (Java/React)</p>
+          <p><strong>Location:</strong> Open to remote &amp; hybrid · Immediate availability on request</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-label">Technical Skills</span>
+          <h2>Stack aligned to enterprise Java hiring</h2>
+        </header>
+
+        <div class="skills-layout">
+          <article class="skill-group reveal">
+            <h3>Backend &amp; Java</h3>
+            <div class="skill-row" data-level="92">
+              <div class="skill-meta"><span>Java (SE &amp; EE patterns)</span><span>92%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="90">
+              <div class="skill-meta"><span>Spring Boot / Spring MVC</span><span>90%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="86">
+              <div class="skill-meta"><span>Hibernate / JPA</span><span>86%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="84">
+              <div class="skill-meta"><span>Spring Security &amp; JWT</span><span>84%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+          </article>
+
+          <article class="skill-group reveal" data-delay="80">
+            <h3>Architecture &amp; APIs</h3>
+            <div class="skill-row" data-level="88">
+              <div class="skill-meta"><span>REST API design</span><span>88%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="82">
+              <div class="skill-meta"><span>Microservices</span><span>82%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="78">
+              <div class="skill-meta"><span>Spring AI / integrations</span><span>78%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-pills">
+              <span>Maven</span><span>Gradle</span><span>JUnit</span><span>Mockito</span>
+            </div>
+          </article>
+
+          <article class="skill-group reveal" data-delay="120">
+            <h3>Data &amp; DevOps</h3>
+            <div class="skill-row" data-level="80">
+              <div class="skill-meta"><span>MySQL</span><span>80%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="80">
+              <div class="skill-meta"><span>PostgreSQL / MongoDB</span><span>80%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="76">
+              <div class="skill-meta"><span>Docker &amp; CI/CD</span><span>76%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+          </article>
+
+          <article class="skill-group reveal" data-delay="160">
+            <h3>Frontend &amp; Tools</h3>
+            <div class="skill-row" data-level="85">
+              <div class="skill-meta"><span>React.js</span><span>85%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="86">
+              <div class="skill-meta"><span>JavaScript / HTML / CSS</span><span>86%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-pills">
+              <span>Git</span><span>GitHub</span><span>Postman</span><span>Jira</span><span>Agile/Scrum</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section-wrap alt-bg">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">Featured Java full-stack projects with practical business use cases.</p>
-        <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article class="project-card">
-            <h3 class="project-title">E-Commerce JFS Platform</h3>
-            <p class="project-desc">Enterprise-ready shopping platform with product catalog, cart, secure checkout, order tracking, and Razor/UPI payment integration.</p>
-            <p class="project-tech">Java, Spring Boot, MySQL, React.js, Razorpay/UPI</p>
-            <div class="mt-4 flex gap-3">
-              <a href="#" class="project-link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" class="project-link-btn project-link-btn-live" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
+    <!-- Achievements -->
+    <section id="achievements" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-label">Achievements</span>
+          <h2>Impact metrics recruiters care about</h2>
+        </header>
+
+        <div class="achievement-grid">
+          <article class="achievement-card reveal">
+            <span class="achievement-value">30%</span>
+            <h3>API performance gain</h3>
+            <p>Optimized microservice endpoints and caching strategy at ABC Tech, cutting average response time.</p>
           </article>
-          <article class="project-card">
-            <h3 class="project-title">Job Connect JFS Portal</h3>
-            <p class="project-desc">Recruitment and job-matching application for candidates and employers with profile management, job applications, and payment-enabled premium plans.</p>
-            <p class="project-tech">Java, Spring Boot, MySQL, React.js, Razorpay/UPI</p>
-            <div class="mt-4 flex gap-3">
-              <a href="#" class="project-link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" class="project-link-btn project-link-btn-live" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
+          <article class="achievement-card reveal" data-delay="60">
+            <span class="achievement-value">20+</span>
+            <h3>Production projects</h3>
+            <p>E-commerce, healthcare, LMS, and fintech platforms shipped with Spring Boot and React.</p>
           </article>
-          <article class="project-card">
-            <h3 class="project-title">Smart Expense Tracker</h3>
-            <p class="project-desc">Personal finance manager with budget goals, category analytics, monthly reports, and secure authentication.</p>
-            <p class="project-tech">Java, Spring MVC, Spring Security, MySQL, React.js</p>
-            <div class="mt-4 flex gap-3">
-              <a href="#" class="project-link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" class="project-link-btn project-link-btn-live" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
+          <article class="achievement-card reveal" data-delay="120">
+            <span class="achievement-value">50+</span>
+            <h3>Developers mentored</h3>
+            <p>Corporate mentorship through structured Java full-stack curriculum and code review cycles.</p>
           </article>
-          <article class="project-card">
-            <h3 class="project-title">Hospital Management System</h3>
-            <p class="project-desc">Role-based hospital workflow platform for doctor scheduling, patient records, appointments, and billing operations.</p>
-            <p class="project-tech">Java, Spring Boot, Hibernate, MySQL, Thymeleaf</p>
-            <div class="mt-4 flex gap-3">
-              <a href="#" class="project-link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" class="project-link-btn project-link-btn-live" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <h3 class="project-title">Inventory & Billing Suite</h3>
-            <p class="project-desc">Business inventory platform with stock alerts, GST-ready invoice generation, purchase tracking, and exportable reports.</p>
-            <p class="project-tech">Java, Spring Boot, MySQL, React.js, Docker</p>
-            <div class="mt-4 flex gap-3">
-              <a href="#" class="project-link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" class="project-link-btn project-link-btn-live" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <h3 class="project-title">Learning Management Portal</h3>
-            <p class="project-desc">Course delivery platform with instructor dashboards, progress tracking, quizzes, certificates, and notification workflows.</p>
-            <p class="project-tech">Java, Spring Boot, MongoDB, React.js, JWT</p>
-            <div class="mt-4 flex gap-3">
-              <a href="#" class="project-link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" class="project-link-btn project-link-btn-live" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
+          <article class="achievement-card reveal" data-delay="180">
+            <span class="achievement-value">99.5%</span>
+            <h3>Uptime on core services</h3>
+            <p>Monitoring, health checks, and resilient deployment practices for business-critical APIs.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section-wrap">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-subtitle">Core technologies and tools I work with.</p>
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
-          <article class="skills-card">
-            <h3 class="skills-group-title">Backend Development</h3>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>Java</span><span>90%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 90%"></div></div>
-            </div>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>Spring Boot</span><span>88%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 88%"></div></div>
-            </div>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>Hibernate/JPA</span><span>82%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 82%"></div></div>
-            </div>
-          </article>
-          <article class="skills-card">
-            <h3 class="skills-group-title">Frontend Development</h3>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>React</span><span>84%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 84%"></div></div>
-            </div>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>JavaScript</span><span>86%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 86%"></div></div>
-            </div>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>Tailwind CSS</span><span>80%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 80%"></div></div>
-            </div>
-          </article>
-          <article class="skills-card">
-            <h3 class="skills-group-title">Database & DevOps</h3>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>MySQL</span><span>85%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 85%"></div></div>
-            </div>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>PostgreSQL</span><span>78%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 78%"></div></div>
-            </div>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>Docker</span><span>75%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 75%"></div></div>
-            </div>
-          </article>
-          <article class="skills-card">
-            <h3 class="skills-group-title">Tools & Practices</h3>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>Git/GitHub</span><span>88%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 88%"></div></div>
-            </div>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>REST API Design</span><span>87%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 87%"></div></div>
-            </div>
-            <div class="skill-progress-item">
-              <div class="skill-meta"><span>CI/CD</span><span>74%</span></div>
-              <div class="skill-progress-track"><div class="skill-progress-fill" style="width: 74%"></div></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <!-- Certifications -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-label">Certifications</span>
+          <h2>Validated credentials</h2>
+        </header>
 
-    <section id="experience-education" class="section-wrap alt-bg">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 class="section-title">Experience & Education</h2>
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
-          <article class="section-card">
-            <h3 class="mb-4 text-lg font-semibold">Experience</h3>
-            <div class="timeline-item">
-              <p class="font-semibold">Software Developer - ABC Tech</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400">2023 - Present</p>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Developed microservices, improved API performance by 30%, and built internal dashboards.</p>
-            </div>
-            <div class="timeline-item">
-              <p class="font-semibold">Junior Java Developer - XYZ Solutions</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400">2021 - 2023</p>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Contributed to enterprise web applications and automated deployment pipelines.</p>
-            </div>
-          </article>
-          <article class="section-card">
-            <h3 class="mb-4 text-lg font-semibold">Education</h3>
-            <div class="timeline-item">
-              <p class="font-semibold">B.Tech in Computer Science</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400">2017 - 2021</p>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">University Name - Specialized in software engineering and data systems.</p>
-            </div>
-            <div class="timeline-item">
-              <p class="font-semibold">Certifications</p>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Spring Professional, AWS Cloud Practitioner, Java SE.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="certifications" class="section-wrap">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 class="section-title">Certifications & Achievements</h2>
-        <p class="section-subtitle">Recognitions that validate my Java full-stack capability and professional growth.</p>
-
-        <div class="cert-carousel mt-8" aria-label="Certifications carousel">
-          <button id="certPrev" class="cert-nav cert-nav-prev" aria-label="Previous certification">‹</button>
+        <div class="cert-carousel reveal" aria-label="Certifications carousel">
+          <button type="button" class="cert-nav cert-prev" id="certPrev" aria-label="Previous certification">&#8249;</button>
           <div class="cert-viewport">
-            <div id="certTrack" class="cert-track">
+            <div class="cert-track" id="certTrack">
               <article class="cert-slide">
-                <p class="cert-badge">HCL - GUVI</p>
-                <h3 class="cert-title">JFS Backend Certification</h3>
-                <p class="cert-desc">Completed intensive backend training in Java, Spring Boot, API design, and database integration for real-world application development.</p>
-                <p class="cert-meta">Focus: Java | Spring Boot | REST APIs | MySQL</p>
+                <span class="cert-org">HCL — GUVI</span>
+                <h3>JFS Backend Certification</h3>
+                <p>Intensive Java, Spring Boot, REST API design, and MySQL integration for production applications.</p>
+                <p class="cert-focus">Java · Spring Boot · REST · MySQL</p>
+                <a href="https://www.guvi.in/verify-certificate?token=jfs-backend-cert-1234567890" class="cert-link">View Certificate</a>
               </article>
-
               <article class="cert-slide">
-                <p class="cert-badge">NSDC</p>
-                <h3 class="cert-title">National Skill Development Certification</h3>
-                <p class="cert-desc">Recognized for industry-aligned software development competencies, professional communication, and problem-solving standards.</p>
-                <p class="cert-meta">Focus: Workforce readiness | Software development standards</p>
+                <span class="cert-org">NSDC</span>
+                <h3>National Skill Development Certification</h3>
+                <p>Industry-aligned software development, communication, and problem-solving standards.</p>
+                <p class="cert-focus">Workforce readiness · Professional standards</p>
               </article>
-
               <article class="cert-slide">
-                <p class="cert-badge">Oracle</p>
-                <h3 class="cert-title">Oracle Java Certification</h3>
-                <p class="cert-desc">Validated expertise in Java fundamentals, OOP principles, collections, exception handling, and enterprise coding practices.</p>
-                <p class="cert-meta">Focus: Core Java | OOP | Collections | Best practices</p>
+                <span class="cert-org">Oracle</span>
+                <h3>Oracle Java Certification</h3>
+                <p>Core Java, OOP, collections, exception handling, and enterprise coding practices.</p>
+                <p class="cert-focus">Core Java · OOP · Collections</p>
               </article>
-
               <article class="cert-slide">
-                <p class="cert-badge">Achievement</p>
-                <h3 class="cert-title">Corporate Dev Mentorship Impact</h3>
-                <p class="cert-desc">Mentored aspiring developers in full stack Java development through structured project guidance and code review support.</p>
-                <p class="cert-meta">Impact: Mentoring | Team enablement | Project-based learning</p>
+                <span class="cert-org">Achievement</span>
+                <h3>Corporate Dev Mentorship Impact</h3>
+                <p>Led full-stack Java cohorts with project-based learning and production-style code reviews.</p>
+                <p class="cert-focus">Mentoring · Team enablement · Delivery</p>
               </article>
             </div>
           </div>
-          <button id="certNext" class="cert-nav cert-nav-next" aria-label="Next certification">›</button>
+          <button type="button" class="cert-nav cert-next" id="certNext" aria-label="Next certification">&#8250;</button>
         </div>
-
-        <div id="certDots" class="cert-dots mt-4" aria-label="Certification slides navigation"></div>
+        <div class="cert-dots" id="certDots" aria-label="Certification slide navigation"></div>
       </div>
     </section>
 
-    <section id="contact" class="section-wrap">
-      <div class="mx-auto max-w-3xl px-4 sm:px-6">
-        <h2 class="section-title text-center">Contact</h2>
-        <p class="section-subtitle text-center">Let us build something impactful together.</p>
-        <form class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-md dark:border-slate-800 dark:bg-slate-900">
-          <div class="grid gap-4 sm:grid-cols-2">
-            <input class="input-field" type="text" placeholder="Your Name" required />
-            <input class="input-field" type="email" placeholder="Your Email" required />
+    <!-- Projects -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-label">Projects</span>
+          <h2>Selected Java full-stack work</h2>
+          <p>Enterprise use cases with Spring Boot backends and modern frontends.</p>
+        </header>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <span class="project-num">01</span>
+            <h3>E-Commerce JFS Platform</h3>
+            <p>Catalog, cart, secure checkout, order tracking, and Razorpay/UPI payment integration.</p>
+            <p class="project-tech">Java · Spring Boot · MySQL · React · Razorpay</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">GitHub</a>
+              <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-delay="60">
+            <span class="project-num">02</span>
+            <h3>Job Connect JFS Portal</h3>
+            <p>Recruitment platform for candidates and employers with premium subscription billing.</p>
+            <p class="project-tech">Java · Spring Boot · MySQL · React · UPI</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">GitHub</a>
+              <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-delay="120">
+            <span class="project-num">03</span>
+            <h3>Smart Expense Tracker</h3>
+            <p>Budget goals, category analytics, monthly reports, and Spring Security authentication.</p>
+            <p class="project-tech">Java · Spring MVC · Security · MySQL · React</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">GitHub</a>
+              <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-delay="60">
+            <span class="project-num">04</span>
+            <h3>Hospital Management System</h3>
+            <p>Role-based workflows for scheduling, patient records, appointments, and billing.</p>
+            <p class="project-tech">Java · Spring Boot · Hibernate · Thymeleaf</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">GitHub</a>
+              <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-delay="120">
+            <span class="project-num">05</span>
+            <h3>Inventory &amp; Billing Suite</h3>
+            <p>Stock alerts, GST-ready invoices, purchase tracking, and exportable business reports.</p>
+            <p class="project-tech">Java · Spring Boot · MySQL · React · Docker</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">GitHub</a>
+              <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+            </div>
+          </article>
+          <article class="project-card reveal" data-delay="180">
+            <span class="project-num">06</span>
+            <h3>Learning Management Portal</h3>
+            <p>Courses, progress tracking, quizzes, certificates, and JWT-secured notification flows.</p>
+            <p class="project-tech">Java · Spring Boot · MongoDB · React · JWT</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">GitHub</a>
+              <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-label">Experience &amp; Education</span>
+          <h2>Professional timeline</h2>
+        </header>
+
+        <div class="timeline-wrap">
+          <div class="timeline reveal">
+            <article class="timeline-item">
+              <time datetime="2023">2023 — Present</time>
+              <h3>Senior Software Developer · ABC Tech</h3>
+              <p>Microservices architecture, API optimization (~30% faster), internal dashboards, and CI/CD automation.</p>
+            </article>
+            <article class="timeline-item">
+              <time datetime="2021">2021 — 2023</time>
+              <h3>Java Developer · XYZ Solutions</h3>
+              <p>Enterprise web applications, Hibernate data models, deployment pipelines, and cross-team delivery.</p>
+            </article>
+            <article class="timeline-item">
+              <time datetime="2019">2019 — 2021</time>
+              <h3>Junior Java Developer · XYZ Solutions</h3>
+              <p>REST modules, unit testing, bug fixes, and feature delivery on client-facing platforms.</p>
+            </article>
           </div>
-          <input class="input-field mt-4 w-full" type="text" placeholder="Subject" required />
-          <textarea class="input-field mt-4 h-32 w-full resize-none" placeholder="Your Message" required></textarea>
-          <button type="submit" class="mt-5 w-full rounded-lg bg-brand-600 px-4 py-2.5 font-semibold text-white hover:bg-brand-700">
-            Send Message
-          </button>
-        </form>
+
+          <aside class="edu-card reveal" data-delay="100">
+            <h3>Education</h3>
+            <p class="edu-degree">B.Tech — Computer Science</p>
+            <p class="edu-years">2017 — 2021</p>
+            <p>Software engineering, data systems, and object-oriented design fundamentals.</p>
+            <hr />
+            <h3>Also certified in</h3>
+            <ul class="edu-certs">
+              <li>Spring Professional (in progress)</li>
+              <li>AWS Cloud Practitioner</li>
+              <li>Java SE — Oracle</li>
+            </ul>
+            <a href="assets/resume.pdf" class="btn btn-primary btn-block" download>Download full resume</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-wrap">
+        <header class="section-head reveal">
+          <span class="section-label">Contact</span>
+          <h2>Let's connect</h2>
+          <p>Recruiters and hiring managers — reach out for resume, references, or technical deep-dives.</p>
+        </header>
+
+        <div class="contact-grid reveal">
+          <div class="contact-info">
+            <a href="mailto:lavish@example.com" class="contact-link">
+              <span class="contact-label">Email</span>
+              lavish@example.com
+            </a>
+            <a href="https://linkedin.com" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-label">LinkedIn</span>
+              linkedin.com/in/lavish
+            </a>
+            <a href="https://github.com" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-label">GitHub</span>
+              github.com/lavish
+            </a>
+            <a href="assets/resume.pdf" class="btn btn-primary" download>Download Resume (PDF)</a>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required placeholder="Your name" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" required placeholder="you@company.com" />
+              </label>
+            </div>
+            <label>
+              <span>Subject</span>
+              <input type="text" name="subject" required placeholder="Role / opportunity" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required placeholder="Brief introduction..."></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary btn-block">Send message</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 py-6 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
-    © <span id="year"></span> Your Name - Full Stack Java Developer
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Lavish — Senior Java Developer</p>
+      <a href="#home" class="back-top" id="backTop" aria-label="Back to top">↑ Top</a>
+    </div>
   </footer>
+
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
 
   <script src="script.js"></script>
 </body>
